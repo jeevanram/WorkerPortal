@@ -1,0 +1,57 @@
+﻿@page "{userId:int}"
+@model VoterPortal.Pages.Users.DetailModel
+@{
+}
+
+<div style="float:left;width:35%">
+    <h4>USER DETAILS</h4>
+    <span class="glyphicon glyphicon-userprofile logo-small"></span>
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>@Model.User.UserId</td>
+        </tr>
+        <tr>
+            <th>NAME</th>
+            <td>@Model.User.FirstName @Model.User.LastName</td>
+        </tr>
+        <tr>
+            <th>LOCATION</th>
+            <td>@Model.User.City, @Model.User.State</td>
+        </tr>
+        <tr>
+            <th>USERNAME</th>
+            <td>@Model.User.Username</td>
+        </tr>
+    </table>
+</div>
+
+<div style="float:left;width:65%">
+    <h4>ABOUT USER</h4>
+    <table>
+        <tr>
+            <th>FIRST NAME</th>
+            <td>@Model.User.FirstName</td>
+            <th>LAST NAME</th>
+            <td>@Model.User.LastName</td>
+            <th>USERNAME</th>
+            <td>@Model.User.Username</td>
+        </tr>
+        <tr>
+            <th>STREET</th>
+            <td>@Model.User.Address1 @Model.User.Address2</td>
+            <th>LOCATION</th>
+            <td>@Model.User.City, @Model.User.State</td>
+            <th>PostalCode</th>
+            <td>@Model.User.State, Pincode-@Model.User.PostalCode</td>
+        </tr>
+        <tr>
+            <th>EMAIL</th>
+            <td>@Model.User.Email</td>
+            <th>PHONE</th>
+            <td>@Model.User.Phone</td>
+        </tr>
+    </table>
+</div>
+
+<a asp-page="./List" class="btn btn-default">All Users</a>

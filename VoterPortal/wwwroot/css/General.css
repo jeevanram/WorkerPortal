@@ -1,0 +1,48 @@
+﻿.jumbotron {
+    background-color: #f4511e !important;
+    color: #fff !important;
+    padding: 100px 25px !important;
+    font-family: Montserrat, sans-serif !important;
+}
+
+.logo-small {
+    color: #f4511e;
+    font-size: 50px;
+}
+
+.logo-large {
+    color: #f4511e;
+    font-size: 200px;
+}
+
+
+footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+}
+
+.glyphicon-form {
+    content : url("../img/Form.png");
+    width:30%;
+}
+
+.glyphicon-user {
+    content: url("../img/User.png");
+    width: 30%;
+}
+.glyphicon-userprofile {
+    content: url("../img/UserProfile.png");
+    width: 50%;
+}
+
+
+.glyphicon-date {
+    content: url("../img/date.png");
+    width: 30%;
+}
+
+.slideanim {
+    visibility: hidden;
+}
+
