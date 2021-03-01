@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using VoterPortal.Core;
+using WorkerPortal.Core;
 using System.Linq;
 
-namespace VoterPortal.Data
+namespace WorkerPortal.Data
 {
     public interface IUserData
     {

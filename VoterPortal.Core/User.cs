@@ -1,6 +1,5 @@
-﻿using System;
-
-namespace VoterPortal.Core
+﻿
+namespace WorkerPortal.Core
 {
     public class User
     {

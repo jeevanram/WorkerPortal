@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "VoterPortal": {
+    "WorkerPortal": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
-COPY ["VoterPortal/VoterPortal.csproj", "VoterPortal/"]
-RUN dotnet restore "VoterPortal/VoterPortal.csproj"
+COPY ["WorkerPortal/WorkerPortal.csproj", "WorkerPortal/"]
+RUN dotnet restore "WorkerPortal/WorkerPortal.csproj"
 COPY . .
-WORKDIR "/src/VoterPortal"
-RUN dotnet build "VoterPortal.csproj" -c Release -o /app/build
+WORKDIR "/src/WorkerPortal"
+RUN dotnet build "WorkerPortal.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "VoterPortal.csproj" -c Release -o /app/publish
+RUN dotnet publish "WorkerPortal.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "VoterPortal.dll"]
+ENTRYPOINT ["dotnet", "WorkerPortal.dll"]

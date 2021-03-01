@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using VoterPortal.Core;
-using VoterPortal.Data;
+using WorkerPortal.Core;
+using WorkerPortal.Data;
 
-namespace VoterPortal.Pages.Users
+namespace WorkerPortal.Pages.Users
 {
     public class DetailModel : PageModel
     {
