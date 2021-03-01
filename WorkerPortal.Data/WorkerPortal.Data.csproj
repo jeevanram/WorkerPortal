@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VoterPortal.Core\WorkerPortal.Core.csproj" />
+    <ProjectReference Include="..\WorkerPortal.Core\WorkerPortal.Core.csproj" />
   </ItemGroup>
 
 </Project>

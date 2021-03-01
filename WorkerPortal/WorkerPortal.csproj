@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VoterPortal.Core\WorkerPortal.Core.csproj" />
-    <ProjectReference Include="..\VoterPortal.Data\WorkerPortal.Data.csproj" />
+    <ProjectReference Include="..\WorkerPortal.Core\WorkerPortal.Core.csproj" />
+    <ProjectReference Include="..\WorkerPortal.Data\WorkerPortal.Data.csproj" />
   </ItemGroup>
 
 </Project>

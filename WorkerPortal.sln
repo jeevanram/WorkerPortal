@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal", "VoterPortal\WorkerPortal.csproj", "{239C7C65-3428-4127-B965-682F1CFF3881}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal", "WorkerPortal\WorkerPortal.csproj", "{239C7C65-3428-4127-B965-682F1CFF3881}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal.Core", "VoterPortal.Core\WorkerPortal.Core.csproj", "{5B584C65-031B-4729-8DB5-2ADE648924EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal.Core", "WorkerPortal.Core\WorkerPortal.Core.csproj", "{5B584C65-031B-4729-8DB5-2ADE648924EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal.Data", "VoterPortal.Data\WorkerPortal.Data.csproj", "{30D47174-4A28-4BE8-92DD-E9413A5A924C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerPortal.Data", "WorkerPortal.Data\WorkerPortal.Data.csproj", "{30D47174-4A28-4BE8-92DD-E9413A5A924C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
