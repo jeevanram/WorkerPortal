@@ -8,10 +8,59 @@
 
 <form method="post">
     <input type="hidden" asp-for="User.UserId" />
-    <input type="hidden" asp-for="User.Username" />
+    <div class="form-group">
+        <label asp-for="User.Username"></label>
+        <input asp-for="User.Username" class="form-control" readonly />
+        <span class="text-danger" asp-validation-for="User.Username"></span>
+    </div>
     <div class="form-group">
         <label asp-for="User.FirstName"></label>
-        <input asp-for="User.FirstName" class="form-control"/>
+        <input asp-for="User.FirstName" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.FirstName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.LastName"></label>
+        <input asp-for="User.LastName" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Email"></label>
+        <input asp-for="User.Email" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.LastName"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Phone"></label>
+        <input asp-for="User.Phone" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.Phone"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Address1"></label>
+        <input asp-for="User.Address1" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.Address1"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Address2"></label>
+        <input asp-for="User.Address2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="User.City"></label>
+        <input asp-for="User.City" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.City"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.County"></label>
+        <input asp-for="User.County" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.County"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.State"></label>
+        <input asp-for="User.State" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.State"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="User.Country"></label>
+        <input asp-for="User.Country" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.Country"></span>
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>

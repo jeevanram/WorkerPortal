@@ -41,9 +41,9 @@
             <th>STREET</th>
             <td>@Model.User.Address1 @Model.User.Address2</td>
             <th>LOCATION</th>
-            <td>@Model.User.City, @Model.User.State</td>
+            <td>@Model.User.City, @Model.User.County</td>
             <th>PostalCode</th>
-            <td>@Model.User.State, Pincode-@Model.User.PostalCode</td>
+            <td>@Model.User.State-@Model.User.PostalCode, @Model.User.Country</td>
         </tr>
         <tr>
             <th>EMAIL</th>

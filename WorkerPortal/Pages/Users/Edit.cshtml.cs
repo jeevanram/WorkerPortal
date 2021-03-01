@@ -18,12 +18,20 @@ namespace WorkerPortal.Pages.Users
 
         public IActionResult OnGet(int userId)
         {
-            User = _userData.GetUserByUserId(userId);
+            if(ModelState.IsValid)
+                User = _userData.GetUserByUserId(userId);
             if(User == null)
             {
                 return RedirectToPage("./NotFound");
             }
             return Page();
+        }
+
+        public IActionResult OnPost()
+        {
+            _userData.UpdateUser(User);
+            _userData.Commit();
+            return RedirectToPage("./List");
         }
     }
 }

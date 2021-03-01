@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <header>
+    <header id="contentHeader">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">WorkerPortal</a>
@@ -43,12 +43,25 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
+    <footer class="border-top footer text-muted" style="position:unset !important">
+        <div class="container" style="background-color:white">
             &copy; 2021 - WorkerPortal - <a asp-area="" asp-page="/Privacy">Privacy</a>
         </div>
     </footer>
+    <script>
+        window.onscroll = function () { fixedHeader() };
 
+        var header = document.getElementById("contentHeader");
+        var sticky = header.offsetTop;
+
+        function fixedHeader() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
