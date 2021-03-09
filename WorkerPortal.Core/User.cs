@@ -12,7 +12,7 @@ namespace WorkerPortal.Core
         public string LastName { get; set; }
         [Required, StringLength(50)]
         public string Email { get; set; }
-        [Required, StringLength(15)]
+        [Required, StringLength(20)]
         public string Phone { get; set; }
         [Required, StringLength(100)]
         public string Address1 { get; set; }

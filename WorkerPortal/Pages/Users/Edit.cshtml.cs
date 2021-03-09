@@ -10,16 +10,25 @@ namespace WorkerPortal.Pages.Users
         private readonly IUserData _userData;
         [BindProperty]
         public User User { get; set; }
+        [BindProperty(SupportsGet =true)]
+        public string ErrorMessage { get; set; }
 
         public EditModel(IUserData userData)
         {
             _userData = userData;
+            ErrorMessage = string.Empty;
         }
 
-        public IActionResult OnGet(int userId)
+        public IActionResult OnGet(int? userId)
         {
-            if(ModelState.IsValid)
-                User = _userData.GetUserByUserId(userId);
+            if (userId.HasValue)
+            {
+                User = _userData.GetUserByUserId(userId.Value);
+            }
+            else
+            {
+                User = new User();
+            }
             if(User == null)
             {
                 return RedirectToPage("./NotFound");
@@ -29,9 +38,32 @@ namespace WorkerPortal.Pages.Users
 
         public IActionResult OnPost()
         {
-            _userData.UpdateUser(User);
-            _userData.Commit();
-            return RedirectToPage("./List");
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            if (User.UserId != 0)
+            {
+                _userData.UpdateUser(User);
+                _userData.Commit();
+                TempData["StatusMessage"] = $"User updated successfully - Username {User.Username}";
+                return RedirectToPage("./List");
+            }
+            else
+            {
+                User newuser = _userData.NewUser(User);
+                if (newuser == null)
+                {
+                    ErrorMessage = "Username exist !";
+                    return Page();
+                }
+                else
+                {
+                    _userData.Commit();
+                    TempData["StatusMessage"] = $"User added successfully - Username {User.Username}";
+                    return RedirectToPage("./List");
+                }
+            }
         }
     }
 }

@@ -36,6 +36,10 @@ footer .glyphicon {
     width: 50%;
 }
 
+#usrsearch:hover {
+    z-index: 0;
+    background-color:red !important;
+}
 
 .glyphicon-date {
     content: url("../img/date.png");
@@ -46,3 +50,27 @@ footer .glyphicon {
     visibility: hidden;
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.nav-link {
+    padding-right: 10px !important;
+    padding-left:10px !important;
+}

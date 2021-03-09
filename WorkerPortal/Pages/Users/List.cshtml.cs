@@ -16,6 +16,8 @@ namespace WorkerPortal.Pages.Users
         public IEnumerable<User> Users { get; set; }
         [BindProperty(SupportsGet =true)] // Act as both input and output model
         public string SearchTerm { get; set; }
+        [TempData]
+        public string StatusMessage { get; set; }
 
         public ListModel(IConfiguration config, IUserData userData)
         {

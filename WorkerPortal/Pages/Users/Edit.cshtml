@@ -1,4 +1,4 @@
-﻿@page "{userId:int}"
+﻿@page "{userId:int?}"
 @model WorkerPortal.Pages.Users.EditModel
 @{
     ViewData["Title"] = "Edit User";
@@ -8,9 +8,18 @@
 
 <form method="post">
     <input type="hidden" asp-for="User.UserId" />
+    @if (!String.IsNullOrEmpty(Model.ErrorMessage))
+    {<div style="width:100%" class="alert alert-danger">@Model.ErrorMessage</div>}
     <div class="form-group">
         <label asp-for="User.Username"></label>
-        <input asp-for="User.Username" class="form-control" readonly />
+        @if (Model.User.UserId == 0)
+        {
+            <input asp-for="User.Username" class="form-control" />
+        }
+        else
+        {
+            <input asp-for="User.Username" class="form-control" readonly />
+        }
         <span class="text-danger" asp-validation-for="User.Username"></span>
     </div>
     <div class="form-group">
@@ -26,7 +35,7 @@
     <div class="form-group">
         <label asp-for="User.Email"></label>
         <input asp-for="User.Email" class="form-control" />
-        <span class="text-danger" asp-validation-for="User.LastName"></span>
+        <span class="text-danger" asp-validation-for="User.Email"></span>
     </div>
     <div class="form-group">
         <label asp-for="User.Phone"></label>
@@ -41,6 +50,11 @@
     <div class="form-group">
         <label asp-for="User.Address2"></label>
         <input asp-for="User.Address2" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="User.PostalCode"></label>
+        <input asp-for="User.PostalCode" class="form-control" />
+        <span class="text-danger" asp-validation-for="User.PostalCode"></span>
     </div>
     <div class="form-group">
         <label asp-for="User.City"></label>

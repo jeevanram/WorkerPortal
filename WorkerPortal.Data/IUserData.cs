@@ -9,6 +9,7 @@ namespace WorkerPortal.Data
         IEnumerable<User> GetUsersByUsername(string username);
         User GetUserByUserId(int userId);
         User UpdateUser(User user);
+        User NewUser(User user);
         int Commit();
     }
 
@@ -61,6 +62,22 @@ namespace WorkerPortal.Data
                 userToUpdate.PostalCode = user.PostalCode;
             }
             return userToUpdate;
+        }
+
+        public User NewUser(User user)
+        {
+            User checkIfUsernameExist = users.Where(usr => usr.Username == user.Username).FirstOrDefault();
+            if (checkIfUsernameExist == null)
+            {
+                users.Add(user);
+                user.UserId = users.Count + 1;
+                return user;
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         public int Commit()
