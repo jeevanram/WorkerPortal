@@ -1,0 +1,12 @@
+﻿@page "{userId:int}"
+@model WorkerPortal.Pages.Users.DeleteModel
+
+<h2>Delete !</h2>
+<div class="alert alert-danger">
+    Are you sure you want to delete @Model.User.Username ?
+</div>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Confirm</button>
+    <a asp-page="List" class="btn">Cancel</a>
+</form>
+
